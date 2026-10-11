@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تفاصيل بطاقة التشغيل - منصة لوجستي</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- مكتبة توليد الباركود تلقائياً -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Tajawal', sans-serif; }
         body { background-color: #f3f5f7; color: #212529; direction: rtl; text-align: right; line-height: 1.6; }
@@ -38,12 +36,7 @@
         /* الحاوية البيضاء المتصلة بكل البيانات */
         .container { max-width: 1050px; margin: 0 auto 25px; padding: 0 20px; }
         
-        .main-card { background: #ffffff; border: 1px solid #dcdcdc; border-radius: 8px; padding: 30px 40px; box-shadow: 0 1px 3px rgba(0,0,0,0.01); position: relative; }
-
-        /* تنسيق قسم الباركود في الزاوية */
-        .qrcode-box { position: absolute; top: 30px; left: 40px; display: flex; flex-direction: column; align-items: center; gap: 5px; }
-        #qrcode canvas, #qrcode img { width: 85px !important; height: 85px !important; border: 1px solid #dee2e6; padding: 4px; border-radius: 4px; background: white; }
-        .qrcode-label { font-size: 11px; color: #6c757d; font-weight: 600; }
+        .main-card { background: #ffffff; border: 1px solid #dcdcdc; border-radius: 8px; padding: 30px 40px; box-shadow: 0 1px 3px rgba(0,0,0,0.01); }
 
         .section-block { padding: 22px 0; border-bottom: 1px solid #e9ecef; }
         .section-block:first-child { padding-top: 0; }
@@ -66,7 +59,7 @@
         .feedback-top-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 15px; border-bottom: 1px solid #e9ecef; }
         .rate-btn { background-color: #0d5c46; color: white; border: none; padding: 8px 22px; border-radius: 5px; font-weight: 700; font-size: 13px; cursor: pointer; }
         .rating-summary { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #212529; font-weight: 500; }
-        .stars { color: #0d5c46; font-size: 16px; letter-spacing: 1px; } /* نجوم باللون الأخضر */
+        .stars { color: #0d5c46; font-size: 16px; letter-spacing: 1px; }
 
         .feedback-bottom-row { display: flex; justify-content: space-between; align-items: center; padding-top: 15px; font-size: 13px; color: #495057; }
         .yn-group { display: flex; align-items: center; gap: 8px; }
@@ -93,7 +86,6 @@
             .col-2, .col-3 { grid-column: span 1; }
             header { flex-direction: column; gap: 15px; align-items: flex-start; padding: 15px; }
             .feedback-top-row, .feedback-bottom-row { flex-direction: column; gap: 10px; align-items: flex-start; }
-            .qrcode-box { position: static; margin-bottom: 15px; }
         }
     </style>
 </head>
@@ -146,12 +138,6 @@
 
     <div class="container">
         <div class="main-card">
-            <!-- باركود التحقق يظهر في أعلى البطاقة -->
-            <div class="qrcode-box">
-                <div id="qrcode"></div>
-                <span class="qrcode-label">رمز التحقق</span>
-            </div>
-
             <!-- بيانات المنشأة / الفرد -->
             <div class="section-block">
                 <div class="section-title">بيانات المنشأة/الفرد</div>
@@ -230,7 +216,7 @@
         </div>
     </div>
 
-    <!-- قسم تقييم الخدمة (نجوم خضراء) -->
+    <!-- قسم تقييم الخدمة -->
     <div class="feedback-container">
         <div class="feedback-card">
             <div class="feedback-top-row">
@@ -310,16 +296,5 @@
         </div>
     </footer>
 
-    <!-- سكود لتوليد الباركود تلقائياً -->
-    <script>
-        new QRCode(document.getElementById("qrcode"), {
-            text: "https://logisti.sa/naql/validate-operation-card?token=9149748f-9d03-466f-a699-8c34a37a9663",
-            width: 85,
-            height: 85,
-            colorDark: "#0d5c46",
-            colorLight: "#ffffff",
-            correctLevel: QRCode.CorrectLevel.H
-        });
-    </script>
 </body>
 </html>
