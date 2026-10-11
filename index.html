@@ -12,24 +12,20 @@
         .gov-banner { background-color: #f1f3f5; padding: 8px 30px; font-size: 12px; color: #6c757d; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center; }
         .gov-banner a { color: #0d5c46; text-decoration: none; font-weight: bold; }
 
-        /* الهيدر والشعار الحقيقي */
-        header { background-color: #ffffff; border-bottom: 1px solid #dee2e6; padding: 12px 30px; display: flex; justify-content: space-between; align-items: center; }
-        .logo-area { display: flex; align-items: center; gap: 10px; }
+        /* الهيدر والشعار الرسمي المطابق */
+        header { background-color: #ffffff; border-bottom: 1px solid #dee2e6; padding: 12px 40px; display: flex; justify-content: space-between; align-items: center; }
         
-        /* أيقونة الشعار الرسمية مرسومة مباشرة لضمان عدم تعطلها */
-        .logisti-logo-icon { width: 36px; height: 36px; background-color: #0d5c46; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 18px; }
-        .logo-text-group { display: flex; flex-direction: column; }
-        .logo-main-text { font-size: 18px; font-weight: bold; color: #0d5c46; letter-spacing: 0.5px; line-height: 1.2; }
-        .logo-sub-text { font-size: 10px; color: #6c757d; font-weight: bold; }
-
-        nav { display: flex; gap: 18px; font-size: 13px; align-items: center; flex-wrap: wrap; }
+        .logo-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-img { height: 42px; width: auto; display: block; }
+        
+        nav { display: flex; gap: 20px; font-size: 13px; align-items: center; flex-wrap: wrap; }
         nav a { color: #495057; text-decoration: none; font-weight: 500; }
         nav a:hover { color: #0d5c46; }
 
         /* الحاوية الرئيسية والبطاقات */
-        .container { max-width: 950px; margin: 25px auto; padding: 0 15px; }
+        .container { max-width: 950px; margin: 30px auto; padding: 0 15px; }
         
-        .card-box { background: #ffffff; border: 1px solid #ced4da; border-radius: 6px; padding: 20px 25px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
+        .card-box { background: #ffffff; border: 1px solid #ced4da; border-radius: 6px; padding: 22px 30px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
         .card-title { font-size: 15px; font-weight: bold; color: #212529; border-bottom: 2px solid #0d5c46; padding-bottom: 8px; margin-bottom: 18px; }
 
         .fields-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 30px; }
@@ -40,7 +36,7 @@
         .field-val { font-size: 14px; font-weight: bold; color: #212529; }
 
         /* التذييل */
-        footer { background-color: #1e293b; color: #94a3b8; padding: 25px 20px; margin-top: 40px; text-align: center; font-size: 12px; }
+        footer { background-color: #1e293b; color: #94a3b8; padding: 25px 20px; margin-top: 50px; text-align: center; font-size: 12px; }
         .footer-links { margin-top: 8px; display: flex; justify-content: center; gap: 15px; }
 
         @media (max-width: 768px) {
@@ -59,12 +55,26 @@
     </div>
 
     <header>
-        <div class="logo-area">
-            <div class="logisti-logo-icon">ل</div>
-            <div class="logo-text-group">
-                <span class="logo-main-text">لوجستي</span>
-                <span class="logo-sub-text">LOGISTI</span>
-            </div>
+        <div class="logo-container">
+            <!-- الشعار الرسمي الدقيق المطابق للصورة -->
+            <svg class="logo-img" viewBox="0 0 240 75" xmlns="http://www.w3.org/2000/svg">
+                <!-- النص العربي: لوجستي -->
+                <text x="135" y="30" font-family="'Segoe UI', Tahoma, sans-serif" font-weight="bold" font-size="22" fill="#2c3e50" text-anchor="end">لوجستي</text>
+                <!-- النص الإنجليزي: LOGISTI -->
+                <text x="135" y="55" font-family="'Segoe UI', Tahoma, sans-serif" font-weight="bold" font-size="18" fill="#4a5568" letter-spacing="2" text-anchor="end">LOGISTI</text>
+                <!-- أيقونة الدرع والأيقونة بداخله -->
+                <g transform="translate(150, 5)">
+                    <path d="M22 0 C35 3 44 8 44 8 C44 25 38 42 22 50 C6 42 0 25 0 8 C0 8 9 3 22 0 Z" fill="url(#shieldGrad)" />
+                    <path d="M22 12 L12 36 L19 32 L22 25 L25 32 L32 36 Z" fill="#ffffff" />
+                    <line x1="22" y1="6" x2="22" y2="14" stroke="#ffffff" stroke-width="1.5" />
+                    <defs>
+                        <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#1b4f72" />
+                            <stop offset="100%" stop-color="#117a65" />
+                        </linearGradient>
+                    </defs>
+                </g>
+            </svg>
         </div>
         <nav>
             <a href="#">الرئيسية</a>
