@@ -3,155 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بيانات المنشأة - لوجستي</title>
+    <title>بيانات المنشأة والترخيص - لوجستي</title>
     <style>
         :root {
-            --primary-color: #0d5c46;
-            --bg-color: #f8f9fa;
+            --primary-green: #0d5c46;
+            --bg-gray: #f4f6f8;
             --card-bg: #ffffff;
-            --text-color: #212529;
-            --border-color: #e9ecef;
+            --text-dark: #2c3e50;
+            --text-muted: #6c757d;
+            --border-color: #e2e8f0;
         }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            direction: rtl;
-        }
-
-        header {
-            background-color: var(--card-bg);
-            border-bottom: 1px solid var(--border-color);
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-            color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        nav a {
-            color: #555;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            color: var(--primary-color);
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 25px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-        }
-
-        .card-title {
-            font-size: 18px;
-            font-weight: bold;
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        .data-group {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-
-        .data-item {
-            margin-bottom: 15px;
-        }
-
-        .data-label {
-            font-size: 13px;
-            color: #6c757d;
-            margin-bottom: 5px;
-        }
-
-        .data-value {
-            font-size: 15px;
-            font-weight: 600;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #888;
-            font-size: 12px;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-gray); color: var(--text-dark); direction: rtl; line-height: 1.6; }
+        .gov-bar { background-color: #f1f3f5; padding: 8px 30px; font-size: 13px; color: var(--text-muted); border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; }
+        .gov-bar a { color: var(--primary-green); text-decoration: none; font-weight: bold; }
+        header { background-color: var(--card-bg); border-bottom: 2px solid var(--border-color); padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .logo-container { display: flex; align-items: center; gap: 10px; }
+        .logo-text { font-size: 22px; font-weight: bold; color: var(--primary-green); }
+        nav { display: flex; gap: 15px; flex-wrap: wrap; }
+        nav a { color: var(--text-dark); text-decoration: none; font-size: 13px; font-weight: 500; }
+        nav a:hover { color: var(--primary-green); }
+        .container { max-width: 950px; margin: 30px auto; padding: 0 20px; }
+        .card { background: var(--card-bg); border-radius: 10px; padding: 25px 30px; margin-bottom: 25px; border: 1px solid var(--border-color); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); }
+        .card-header { border-bottom: 2px solid var(--primary-green); padding-bottom: 12px; margin-bottom: 20px; }
+        .card-title { font-size: 18px; font-weight: bold; color: var(--primary-green); }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px 30px; }
+        .info-item { display: flex; flex-direction: column; }
+        .info-label { font-size: 13px; color: var(--text-muted); margin-bottom: 4px; }
+        .info-value { font-size: 15px; font-weight: 600; color: var(--text-dark); }
+        footer { background-color: #1e293b; color: #e2e8f0; padding: 30px 20px 15px; margin-top: 50px; font-size: 13px; text-align: center; }
+        .footer-links { margin-top: 10px; color: #94a3b8; font-size: 12px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
     </style>
 </head>
 <body>
 
-    <!-- الهيدر وشريط التنقل -->
+    <div class="gov-bar">
+        <span>موقع حكومي رسمي تابع لحكومة المملكة العربية السعودية</span>
+        <a href="#">كيف تتحقق ..</a>
+    </div>
+
     <header>
-        <div class="logo">
-            <span>لوجستي LOGISTI</span>
+        <div class="logo-container">
+            <div class="logo-text">لوجستي LOGISTI</div>
         </div>
         <nav>
             <a href="#">الرئيسية</a>
+            <a href="#">لوجستي</a>
             <a href="#">الخدمات</a>
             <a href="#">الخريطة الملاحية</a>
             <a href="#">المراكز اللوجستية</a>
-            <a href="#">مركز الناقلين الترخيصين</a>
+            <a href="#">مجلس الشراكة اللوجستي</a>
+            <a href="#">دليل الناقلين المرخصين</a>
         </nav>
     </header>
 
-    <!-- محتوى البيانات -->
     <div class="container">
-        <!-- قسم بيانات المنشأة -->
+        <!-- بيانات المنشأة -->
         <div class="card">
-            <div class="card-title">بيانات المنشأة / الفرد</div>
-            <div class="data-group">
-                <div class="data-item">
-                    <div class="data-label">اسم المنشأة</div>
-                    <div class="data-value">مؤسسة نقل الركاب والخدمات اللوجستية</div>
-                </div>
-                <div class="data-item">
-                    <div class="data-label">نوع النشاط</div>
-                    <div class="data-value">نشاط نقل الركاب بالحافلات لغير أغراض الركاب - منشآت</div>
+            <div class="card-header"><div class="card-title">بيانات المنشأة / الفرد</div></div>
+            <div class="grid-container">
+                <div class="info-item">
+                    <div class="info-label">الاسم</div>
+                    <div class="info-value">شركة ركاب السرعة للخدمات اللوجستية</div>
                 </div>
             </div>
         </div>
 
-        <!-- قسم معلومات إضافية -->
+        <!-- معلومات الترخيص الرئيسي -->
         <div class="card">
-            <div class="card-title">معلومات الترخيص والتسجيل</div>
-            <div class="data-group">
-                <div class="data-item">
-                    <div class="data-label">حالة الترخيص</div>
-                    <div class="data-value" style="color: green;">نشط</div>
-                </div>
+            <div class="card-header"><div class="card-title">معلومات الترخيص الرئيسي</div></div>
+            <div class="grid-container">
+                <div class="info-item"><div class="info-label">رقم الترخيص</div><div class="info-value">38/00026896</div></div>
+                <div class="info-item"><div class="info-label">نوع الترخيص / النشاط</div><div class="info-value">نشاط النقل الخفيف للبضائع لأغراض تجارية للغير - منشآت</div></div>
+                <div class="info-item"><div class="info-label">المدينة</div><div class="info-value">محافظة الرس</div></div>
+            </div>
+        </div>
+
+        <!-- بيانات بطاقة التشغيل -->
+        <div class="card">
+            <div class="card-header"><div class="card-title">بيانات بطاقة التشغيل</div></div>
+            <div class="grid-container">
+                <div class="info-item"><div class="info-label">رقم البطاقة</div><div class="info-value">38-00090078</div></div>
+                <div class="info-item"><div class="info-label">نوع بطاقة التشغيل</div><div class="info-value">نشاط النقل الخفيف للبضائع لأغراض تجارية للغير - منشآت</div></div>
+                <div class="info-item"><div class="info-label">تاريخ الإصدار</div><div class="info-value">1448/01/29 هـ</div></div>
+                <div class="info-item"><div class="info-label">تاريخ الإنتهاء</div><div class="info-value">1448/07/09 هـ</div></div>
+            </div>
+        </div>
+
+        <!-- معلومات المركبة -->
+        <div class="card">
+            <div class="card-header"><div class="card-title">معلومات المركبة</div></div>
+            <div class="grid-container">
+                <div class="info-item"><div class="info-label">نوع السيارة - الماركة والطراز</div><div class="info-value">ديز اير سوزوكي</div></div>
+                <div class="info-item"><div class="info-label">رقم اللوحة</div><div class="info-value">9421 أطب</div></div>
+                <div class="info-item"><div class="info-label">سنة الصنع</div><div class="info-value">2022</div></div>
+                <div class="info-item"><div class="info-label">لون المركبة</div><div class="info-value">بني</div></div>
+                <div class="info-item"><div class="info-label">الرقم التسلسلي</div><div class="info-value">883220910</div></div>
             </div>
         </div>
     </div>
 
     <footer>
-        موقع رسمي - جميع الحقوق محفوظة © 2026
+        <div>جميع الحقوق محفوظة 2022 - 2026 © لمنصة لوجستي | من تطوير وصيانة شركة علم</div>
+        <div class="footer-links">
+            <span>سياسة الخصوصية</span> | 
+            <span>الشروط والأحكام</span> | 
+            <span>خريطة الموقع</span>
+        </div>
     </footer>
 
 </body>
