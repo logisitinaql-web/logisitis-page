@@ -15,8 +15,11 @@
         /* الهيدر والشعار الرسمي المطابق */
         header { background-color: #ffffff; border-bottom: 1px solid #dee2e6; padding: 12px 40px; display: flex; justify-content: space-between; align-items: center; }
         
-        .logo-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .logo-img { height: 42px; width: auto; display: block; }
+        .logo-container { display: flex; align-items: center; gap: 15px; direction: ltr; }
+        .logo-texts { display: flex; flex-direction: column; text-align: left; }
+        .logo-ar { font-size: 20px; font-weight: bold; color: #2c3e50; line-height: 1.1; font-family: Tahoma, sans-serif; }
+        .logo-en { font-size: 14px; font-weight: bold; color: #4a5568; letter-spacing: 1.5px; }
+        .logo-svg { height: 40px; width: auto; }
         
         nav { display: flex; gap: 20px; font-size: 13px; align-items: center; flex-wrap: wrap; }
         nav a { color: #495057; text-decoration: none; font-weight: 500; }
@@ -55,27 +58,6 @@
     </div>
 
     <header>
-        <div class="logo-container">
-            <!-- الشعار الرسمي الدقيق المطابق للصورة -->
-            <svg class="logo-img" viewBox="0 0 240 75" xmlns="http://www.w3.org/2000/svg">
-                <!-- النص العربي: لوجستي -->
-                <text x="135" y="30" font-family="'Segoe UI', Tahoma, sans-serif" font-weight="bold" font-size="22" fill="#2c3e50" text-anchor="end">لوجستي</text>
-                <!-- النص الإنجليزي: LOGISTI -->
-                <text x="135" y="55" font-family="'Segoe UI', Tahoma, sans-serif" font-weight="bold" font-size="18" fill="#4a5568" letter-spacing="2" text-anchor="end">LOGISTI</text>
-                <!-- أيقونة الدرع والأيقونة بداخله -->
-                <g transform="translate(150, 5)">
-                    <path d="M22 0 C35 3 44 8 44 8 C44 25 38 42 22 50 C6 42 0 25 0 8 C0 8 9 3 22 0 Z" fill="url(#shieldGrad)" />
-                    <path d="M22 12 L12 36 L19 32 L22 25 L25 32 L32 36 Z" fill="#ffffff" />
-                    <line x1="22" y1="6" x2="22" y2="14" stroke="#ffffff" stroke-width="1.5" />
-                    <defs>
-                        <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stop-color="#1b4f72" />
-                            <stop offset="100%" stop-color="#117a65" />
-                        </linearGradient>
-                    </defs>
-                </g>
-            </svg>
-        </div>
         <nav>
             <a href="#">الرئيسية</a>
             <a href="#">لوجستي</a>
@@ -85,6 +67,25 @@
             <a href="#">مجلس الشراكة اللوجستي</a>
             <a href="#">دليل الناقلين المرخصين</a>
         </nav>
+        
+        <div class="logo-container">
+            <div class="logo-texts">
+                <span class="logo-ar">لوجستي</span>
+                <span class="logo-en">LOGISTI</span>
+            </div>
+            <!-- الشعار الرسمي الدقيق المطابق للصورة -->
+            <svg class="logo-svg" viewBox="0 0 50 55" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 0 C38 3 47 8 47 8 C47 25 41 42 25 50 C9 42 3 25 3 8 C3 8 12 3 25 0 Z" fill="url(#shieldGrad)" />
+                <path d="M25 12 L15 36 L22 32 L25 25 L28 32 L35 36 Z" fill="#ffffff" />
+                <line x1="25" y1="6" x2="25" y2="14" stroke="#ffffff" stroke-width="1.5" />
+                <defs>
+                    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#1b4f72" />
+                        <stop offset="100%" stop-color="#117a65" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
     </header>
 
     <div class="container">
