@@ -30,22 +30,21 @@
         .header-left { display: flex; align-items: center; gap: 20px; font-size: 13px; color: #4a5568; }
         .header-left span { cursor: pointer; display: flex; align-items: center; gap: 5px; }
 
-        /* عنوان تفاصيل بطاقة التشغيل باللون الأخضر */
-        .page-title-bar { max-width: 1000px; margin: 25px auto 12px; padding: 0 20px; font-size: 14px; font-weight: 700; color: #0d5c46; text-align: right; }
+        /* عنوان الصفحة الأخضر */
+        .page-title-bar { max-width: 1050px; margin: 25px auto 12px; padding: 0 20px; font-size: 14px; font-weight: 700; color: #0d5c46; text-align: right; }
 
-        /* الحاوية البيضاء الكبرى المتصلة */
-        .container { max-width: 1000px; margin: 0 auto 30px; padding: 0 20px; }
+        /* الحاوية البيضاء المتصلة بكل البيانات */
+        .container { max-width: 1050px; margin: 0 auto 25px; padding: 0 20px; }
         
-        .main-card { background: #ffffff; border: 1px solid #dcdcdc; border-radius: 8px; padding: 30px 40px; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
+        .main-card { background: #ffffff; border: 1px solid #dcdcdc; border-radius: 8px; padding: 30px 40px; box-shadow: 0 1px 3px rgba(0,0,0,0.01); }
 
-        /* أقسام البيانات داخل الحاوية الفاصلة */
         .section-block { padding: 22px 0; border-bottom: 1px solid #e9ecef; }
         .section-block:first-child { padding-top: 0; }
         .section-block:last-child { border-bottom: none; padding-bottom: 0; }
 
         .section-title { font-size: 16px; font-weight: 700; color: #212529; margin-bottom: 20px; text-align: right; }
 
-        .fields-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; direction: rtl; }
+        .fields-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px 30px; direction: rtl; }
         .col-2 { grid-column: span 2; }
         .col-3 { grid-column: span 3; }
 
@@ -53,39 +52,40 @@
         .field-label { font-size: 12px; color: #6c757d; margin-bottom: 5px; font-weight: 400; }
         .field-val { font-size: 14px; font-weight: 600; color: #212529; }
 
-        /* قسم التقييم وتجارب المستخدم */
-        .feedback-section { max-width: 1000px; margin: 0 auto 40px; padding: 0 20px; }
-        .feedback-box { background: #ffffff; border: 1px solid #dcdcdc; border-radius: 8px; padding: 25px 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
-        .feedback-right { display: flex; align-items: center; gap: 20px; }
-        .rate-btn { background-color: #0d5c46; color: white; border: none; padding: 8px 20px; border-radius: 6px; font-weight: 700; font-size: 13px; cursor: pointer; }
-        .rating-info { display: flex; flex-direction: column; gap: 3px; }
-        .stars { color: #f1c40f; font-size: 16px; letter-spacing: 2px; }
-        .rating-text { font-size: 13px; color: #495057; font-weight: 500; }
+        /* قسم التقييم المطابق تماماً للصورة الحقيقية */
+        .feedback-container { max-width: 1050px; margin: 0 auto 40px; padding: 0 20px; }
+        .feedback-card { background: #ffffff; border: 1px solid #dcdcdc; border-radius: 8px; padding: 20px 30px; box-shadow: 0 1px 3px rgba(0,0,0,0.01); }
+        
+        .feedback-top-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 15px; border-bottom: 1px solid #e9ecef; }
+        .rate-btn { background-color: #0d5c46; color: white; border: none; padding: 8px 22px; border-radius: 5px; font-weight: 700; font-size: 13px; cursor: pointer; }
+        .rating-summary { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #212529; font-weight: 500; }
+        .stars { color: #f1c40f; font-size: 16px; }
 
-        .feedback-left { display: flex; align-items: center; gap: 15px; font-size: 13px; color: #495057; }
-        .yes-no-btns { display: flex; gap: 8px; }
-        .yn-btn { background: #f1f3f5; border: 1px solid #ced4da; padding: 5px 15px; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 12px; }
+        .feedback-bottom-row { display: flex; justify-content: space-between; align-items: center; padding-top: 15px; font-size: 13px; color: #495057; }
+        .yn-group { display: flex; align-items: center; gap: 8px; }
+        .yn-btn { background: #e9ecef; border: 1px solid #ced4da; padding: 4px 16px; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 12px; color: #212529; }
         .yn-btn.yes { background-color: #0d5c46; color: white; border-color: #0d5c46; }
 
-        /* التذييل الاحترافي المفصل */
+        /* تذييل الصفحة */
         footer { background-color: #f8f9fa; border-top: 1px solid #dee2e6; color: #495057; padding: 40px 40px 20px; font-size: 12px; margin-top: 40px; }
-        .footer-content { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: right; margin-bottom: 30px; }
-        .footer-col h4 { font-size: 14px; font-weight: 700; color: #212529; margin-bottom: 15px; }
-        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+        .footer-content { max-width: 1050px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: right; margin-bottom: 30px; }
+        .footer-col h4 { font-size: 13px; font-weight: 700; color: #212529; margin-bottom: 12px; }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
         .footer-col ul li a { color: #6c757d; text-decoration: none; }
         .footer-col ul li a:hover { color: #0d5c46; }
 
-        .social-icons { display: flex; gap: 10px; margin-top: 5px; }
-        .social-icon { width: 28px; height: 28px; border: 1px solid #ced4da; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #495057; text-decoration: none; font-size: 12px; }
+        .social-icons { display: flex; gap: 8px; margin-top: 5px; }
+        .social-icon { width: 26px; height: 26px; border: 1px solid #ced4da; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #495057; text-decoration: none; font-size: 11px; }
 
-        .footer-bottom { border-top: 1px solid #dee2e6; padding-top: 20px; max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; color: #6c757d; font-size: 11px; }
+        .footer-bottom { border-top: 1px solid #dee2e6; padding-top: 20px; max-width: 1050px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; color: #6c757d; font-size: 11px; }
         .footer-bottom-links { display: flex; gap: 15px; }
         .footer-bottom-links a { color: #6c757d; text-decoration: none; }
 
         @media (max-width: 900px) {
-            .fields-grid, .footer-content, .feedback-box { grid-template-columns: 1fr; flex-direction: column; gap: 20px; text-align: right; }
+            .fields-grid, .footer-content { grid-template-columns: 1fr; }
             .col-2, .col-3 { grid-column: span 1; }
             header { flex-direction: column; gap: 15px; align-items: flex-start; padding: 15px; }
+            .feedback-top-row, .feedback-bottom-row { flex-direction: column; gap: 10px; align-items: flex-start; }
         }
     </style>
 </head>
@@ -140,11 +140,11 @@
         <div class="main-card">
             <!-- بيانات المنشأة / الفرد -->
             <div class="section-block">
-                <div class="section-title">بيانات المنشأة / الفرد</div>
+                <div class="section-title">بيانات المنشأة/الفرد</div>
                 <div class="fields-grid">
                     <div class="field-group col-3">
                         <span class="field-label">الاسم</span>
-                        <span class="field-val">شركة ركاب السرعة للخدمات اللوجستية</span>
+                        <span class="field-val">شركة ركاب السرعه للخدمات اللوجستية</span>
                     </div>
                 </div>
             </div>
@@ -157,9 +157,9 @@
                         <span class="field-label">رقم الترخيص</span>
                         <span class="field-val">38/00026896</span>
                     </div>
-                    <div class="field-group col-2">
+                    <div class="field-group">
                         <span class="field-label">نوع الترخيص/النشاط</span>
-                        <span class="field-val">نشاط النقل الخفيف للبضائع لأغراض تجارية للغير - منشآت</span>
+                        <span class="field-val">نشاط النقل الخفيف للبضائع لأغراض تجارية (للغير - منشآت)</span>
                     </div>
                     <div class="field-group">
                         <span class="field-label">المدينة</span>
@@ -176,17 +176,13 @@
                         <span class="field-label">رقم البطاقة</span>
                         <span class="field-val">38-00090078</span>
                     </div>
-                    <div class="field-group col-2">
+                    <div class="field-group">
                         <span class="field-label">نوع بطاقة التشغيل</span>
-                        <span class="field-val">نشاط النقل الخفيف للبضائع لأغراض تجارية للغير - منشآت</span>
+                        <span class="field-val">نشاط النقل الخفيف للبضائع لأغراض تجارية (للغير - منشآت)</span>
                     </div>
                     <div class="field-group">
                         <span class="field-label">تاريخ الإصدار</span>
-                        <span class="field-val">1448/01/29 هـ</span>
-                    </div>
-                    <div class="field-group">
-                        <span class="field-label">تاريخ الإنتهاء</span>
-                        <span class="field-val">1448/07/09 هـ</span>
+                        <span class="field-val">1448/01/29</span>
                     </div>
                 </div>
             </div>
@@ -220,19 +216,21 @@
         </div>
     </div>
 
-    <!-- قسم تقييم الخدمة -->
-    <div class="feedback-section">
-        <div class="feedback-box">
-            <div class="feedback-right">
-                <button class="rate-btn">قيم الخدمة</button>
-                <div class="rating-info">
-                    <div class="stars">★★★★★</div>
-                    <span class="rating-text">4.63 بلغ متوسط تقييم هذه الخدمة (49 تقييم)</span>
+    <!-- قسم تقييم الخدمة المطابق تماماً للصورة الأصلية -->
+    <div class="feedback-container">
+        <div class="feedback-card">
+            <div class="feedback-top-row">
+                <div class="rating-summary">
+                    <span>بلغ متوسط تقييم هذه الخدمة 4.63</span>
+                    <span class="stars">★★★★★</span>
+                    <span>49 تقييمات</span>
                 </div>
+                <button class="rate-btn">قيم الخدمة</button>
             </div>
-            <div class="feedback-left">
-                <span>هل كانت هذه الصفحة مفيدة؟ (86% من المستخدمين قالوا نعم من أصل 14 تقييم)</span>
-                <div class="yes-no-btns">
+            <div class="feedback-bottom-row">
+                <span>86% من المستخدمين قالوا نعم من أصل 14 تقييمات</span>
+                <div class="yn-group">
+                    <span>هل كانت هذه الصفحة مفيدة؟</span>
                     <button class="yn-btn yes">نعم</button>
                     <button class="yn-btn">لا</button>
                 </div>
@@ -240,7 +238,7 @@
         </div>
     </div>
 
-    <!-- التذييل المفصل للموقع -->
+    <!-- التذييل الرئيسي للموقع -->
     <footer>
         <div class="footer-content">
             <div class="footer-col">
@@ -279,7 +277,7 @@
                     <a href="#" class="social-icon">in</a>
                     <a href="#" class="social-icon">ig</a>
                 </div>
-                <h4 style="margin-top: 20px;">أدوات الإتاحة والوصول</h4>
+                <h4 style="margin-top: 18px;">أدوات الإتاحة والوصول</h4>
                 <div class="social-icons">
                     <a href="#" class="social-icon">👁</a>
                     <a href="#" class="social-icon">➕</a>
