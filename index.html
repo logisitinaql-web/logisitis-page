@@ -3,58 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة لوجستي - تفاصيل الترخيص وبطاقة التشغيل</title>
+    <title>منصة لوجستي - Logisti</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Tahoma, Arial, sans-serif; }
-        body { background-color: #f4f6f9; color: #333; direction: rtl; text-align: right; line-height: 1.6; }
-        
-        /* الشريط الحكومي العلوي */
-        .gov-banner { background-color: #eaeef2; padding: 6px 40px; font-size: 11px; color: #555; border-bottom: 1px solid #dcdcdc; display: flex; justify-content: space-between; align-items: center; }
-        .gov-banner a { color: #0d5c46; text-decoration: none; font-weight: bold; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+        body { background-color: #f7f9fa; color: #2d3748; direction: rtl; text-align: right; line-height: 1.6; }
 
-        /* ترويسة الموقع الرئيسية */
-        header { background-color: #ffffff; border-bottom: 2px solid #e0e0e0; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; }
-        .logo-section { display: flex; align-items: center; gap: 8px; font-size: 20px; font-weight: bold; color: #0d5c46; }
-        
+        /* الشريط العلوي الحكومي */
+        .gov-bar { background-color: #edf2f7; padding: 8px 40px; font-size: 12px; color: #4a5568; border-bottom: 1px solid #e2e8f0; display: flex; justify-content: space-between; align-items: center; }
+        .gov-bar a { color: #0d5c46; text-decoration: none; font-weight: bold; }
+
+        /* ترويسة الموقع والشعار الحقيقي */
+        header { background-color: #ffffff; border-bottom: 1px solid #cbd5e0; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; }
+        .logo-box { display: flex; align-items: center; gap: 12px; }
+        .logo-box img { height: 35px; width: auto; }
+        .logo-text { font-size: 20px; font-weight: bold; color: #0d5c46; letter-spacing: 0.5px; }
+
         nav { display: flex; gap: 20px; font-size: 13px; align-items: center; }
-        nav a { color: #333; text-decoration: none; }
+        nav a { color: #4a5568; text-decoration: none; font-weight: 500; }
         nav a:hover { color: #0d5c46; }
 
-        /* الحاوية وبطاقات المحتوى */
-        .container { max-width: 950px; margin: 30px auto; padding: 0 20px; }
-        
-        .info-card { background: #ffffff; border: 1px solid #d1d5db; border-radius: 6px; padding: 20px 25px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-        .card-heading { font-size: 15px; font-weight: bold; color: #111; border-bottom: 2px solid #0d5c46; padding-bottom: 8px; margin-bottom: 18px; }
-        
-        .fields-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 30px; }
-        .full-width { grid-column: span 2; }
-        
-        .field-group { display: flex; flex-direction: column; }
-        .field-label { font-size: 12px; color: #6b7280; margin-bottom: 4px; }
-        .field-value { font-size: 14px; font-weight: bold; color: #1f2937; border-bottom: 1px solid #f0f0f0; padding-bottom: 4px; }
+        /* الحاوية الرئيسية */
+        .main-container { max-width: 950px; margin: 30px auto; padding: 0 20px; }
 
-        /* التذييل */
-        footer { background-color: #1e293b; color: #94a3b8; padding: 25px 20px; margin-top: 50px; text-align: center; font-size: 12px; }
-        .footer-links { margin-top: 8px; display: flex; justify-content: center; gap: 15px; }
+        /* بطاقات العرض المطابقة */
+        .data-section { background: #ffffff; border: 1px solid #cbd5e0; border-radius: 4px; padding: 20px 25px; margin-bottom: 20px; box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
+        .section-header { font-size: 15px; font-weight: bold; color: #1a202c; border-bottom: 2px solid #0d5c46; padding-bottom: 8px; margin-bottom: 20px; }
+
+        .grid-layout { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 30px; }
+        .span-all { grid-column: span 2; }
+
+        .field-box { display: flex; flex-direction: column; }
+        .field-title { font-size: 12px; color: #718096; margin-bottom: 4px; }
+        .field-content { font-size: 14px; font-weight: bold; color: #2d3748; }
+
+        /* تذييل الصفحة */
+        footer { background-color: #1e293b; color: #94a3b8; padding: 30px 20px; margin-top: 50px; text-align: center; font-size: 12px; }
+        .footer-links { margin-top: 10px; display: flex; justify-content: center; gap: 15px; }
 
         @media (max-width: 768px) {
-            .fields-grid { grid-template-columns: 1fr; }
-            .full-width { grid-column: span 1; }
-            header { flex-direction: column; gap: 10px; align-items: flex-start; padding: 15px; }
-            .gov-banner { padding: 6px 15px; }
+            .grid-layout { grid-template-columns: 1fr; }
+            .span-all { grid-column: span 1; }
+            header { flex-direction: column; gap: 12px; align-items: flex-start; padding: 15px; }
+            .gov-bar { padding: 8px 15px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="gov-banner">
+    <div class="gov-bar">
         <span>موقع حكومي رسمي تابع لحكومة المملكة العربية السعودية</span>
         <a href="#">كيف تتحقق ..</a>
     </div>
 
     <header>
-        <div class="logo-section">
-            <span>لوجستي LOGISTI</span>
+        <div class="logo-box">
+            <img src="https://www.logisti.sa/assets/images/logo.svg" alt="شعار لوجستي">
+            <span class="logo-text">لوجستي LOGISTI</span>
         </div>
         <nav>
             <a href="#">الرئيسية</a>
@@ -67,83 +71,83 @@
         </nav>
     </header>
 
-    <div class="container">
+    <div class="main-container">
         <!-- بيانات المنشأة / الفرد -->
-        <div class="info-card">
-            <div class="card-heading">بيانات المنشأة / الفرد</div>
-            <div class="fields-grid">
-                <div class="field-group full-width">
-                    <span class="field-label">الاسم</span>
-                    <span class="field-value">شركة ركاب السرعة للخدمات اللوجستية</span>
+        <div class="data-section">
+            <div class="section-header">بيانات المنشأة / الفرد</div>
+            <div class="grid-layout">
+                <div class="field-box span-all">
+                    <span class="field-title">الاسم</span>
+                    <span class="field-content">شركة ركاب السرعة للخدمات اللوجستية</span>
                 </div>
             </div>
         </div>
 
         <!-- معلومات الترخيص الرئيسي -->
-        <div class="info-card">
-            <div class="card-heading">معلومات الترخيص الرئيسي</div>
-            <div class="fields-grid">
-                <div class="field-group">
-                    <span class="field-label">رقم الترخيص</span>
-                    <span class="field-value">38/00026896</span>
+        <div class="data-section">
+            <div class="section-header">معلومات الترخيص الرئيسي</div>
+            <div class="grid-layout">
+                <div class="field-box">
+                    <span class="field-title">رقم الترخيص</span>
+                    <span class="field-content">38/00026896</span>
                 </div>
-                <div class="field-group">
-                    <span class="field-label">المدينة</span>
-                    <span class="field-value">محافظة الرس</span>
+                <div class="field-box">
+                    <span class="field-title">المدينة</span>
+                    <span class="field-content">محافظة الرس</span>
                 </div>
-                <div class="field-group full-width">
-                    <span class="field-label">نوع الترخيص / النشاط</span>
-                    <span class="field-value">نشاط النقل الخفيف للبضائع لأغراض تجارية للغير - منشآت</span>
+                <div class="field-box span-all">
+                    <span class="field-title">نوع الترخيص / النشاط</span>
+                    <span class="field-content">نشاط النقل الخفيف للبضائع لأغراض تجارية للغير - منشآت</span>
                 </div>
             </div>
         </div>
 
         <!-- بيانات بطاقة التشغيل -->
-        <div class="info-card">
-            <div class="card-heading">بيانات بطاقة التشغيل</div>
-            <div class="fields-grid">
-                <div class="field-group">
-                    <span class="field-label">رقم البطاقة</span>
-                    <span class="field-value">38-00090078</span>
+        <div class="data-section">
+            <div class="section-header">بيانات بطاقة التشغيل</div>
+            <div class="grid-layout">
+                <div class="field-box">
+                    <span class="field-title">رقم البطاقة</span>
+                    <span class="field-content">38-00090078</span>
                 </div>
-                <div class="field-group">
-                    <span class="field-label">تاريخ الإصدار</span>
-                    <span class="field-value">1448/01/29 هـ</span>
+                <div class="field-box">
+                    <span class="field-title">تاريخ الإصدار</span>
+                    <span class="field-content">1448/01/29 هـ</span>
                 </div>
-                <div class="field-group">
-                    <span class="field-label">تاريخ الإنتهاء</span>
-                    <span class="field-value">1448/07/09 هـ</span>
+                <div class="field-box">
+                    <span class="field-title">تاريخ الإنتهاء</span>
+                    <span class="field-content">1448/07/09 هـ</span>
                 </div>
-                <div class="field-group full-width">
-                    <span class="field-label">نوع بطاقة التشغيل</span>
-                    <span class="field-value">نشاط النقل الخفيف للبضائع لأغراض تجارية للغير - منشآت</span>
+                <div class="field-box span-all">
+                    <span class="field-title">نوع بطاقة التشغيل</span>
+                    <span class="field-content">نشاط النقل الخفيف للبضائع لأغراض تجارية للغير - منشآت</span>
                 </div>
             </div>
         </div>
 
         <!-- معلومات المركبة -->
-        <div class="info-card">
-            <div class="card-heading">معلومات المركبة</div>
-            <div class="fields-grid">
-                <div class="field-group">
-                    <span class="field-label">نوع السيارة - الماركة والطراز</span>
-                    <span class="field-value">ديز اير سوزوكي</span>
+        <div class="data-section">
+            <div class="section-header">معلومات المركبة</div>
+            <div class="grid-layout">
+                <div class="field-box">
+                    <span class="field-title">نوع السيارة - الماركة والطراز</span>
+                    <span class="field-content">ديز اير سوزوكي</span>
                 </div>
-                <div class="field-group">
-                    <span class="field-label">رقم اللوحة</span>
-                    <span class="field-value">9421 أطب</span>
+                <div class="field-box">
+                    <span class="field-title">رقم اللوحة</span>
+                    <span class="field-content">9421 أطب</span>
                 </div>
-                <div class="field-group">
-                    <span class="field-label">سنة الصنع</span>
-                    <span class="field-value">2022</span>
+                <div class="field-box">
+                    <span class="field-title">سنة الصنع</span>
+                    <span class="field-content">2022</span>
                 </div>
-                <div class="field-group">
-                    <span class="field-label">لون المركبة</span>
-                    <span class="field-value">بني</span>
+                <div class="field-box">
+                    <span class="field-title">لون المركبة</span>
+                    <span class="field-content">بني</span>
                 </div>
-                <div class="field-group full-width">
-                    <span class="field-label">الرقم التسلسلي</span>
-                    <span class="field-value">883220910</span>
+                <div class="field-box span-all">
+                    <span class="field-title">الرقم التسلسلي</span>
+                    <span class="field-content">883220910</span>
                 </div>
             </div>
         </div>
