@@ -1,0 +1,78 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Tajawal', sans-serif; }
+body { background-color: #f3f5f7; color: #212529; direction: rtl; text-align: right; line-height: 1.6; }
+
+/* الشريط العلوي الحكومي */
+.gov-banner { background-color: #f1f3f5; padding: 6px 40px; font-size: 11px; color: #495057; border-bottom: 1px solid #dee2e6; display: flex; justify-content: space-between; align-items: center; }
+.gov-banner a { color: #0d5c46; text-decoration: none; font-weight: bold; }
+
+/* الهيدر الرئيسي */
+header { background-color: #ffffff; border-bottom: 1px solid #dee2e6; padding: 12px 40px; display: flex; justify-content: space-between; align-items: center; }
+.header-right { display: flex; align-items: center; gap: 25px; }
+.logo-container { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-svg { height: 35px; width: auto; }
+.logo-texts { display: flex; flex-direction: column; text-align: right; }
+.logo-ar { font-size: 17px; font-weight: 700; color: #1a202c; line-height: 1; }
+.logo-en { font-size: 11px; font-weight: 700; color: #4a5568; letter-spacing: 0.5px; }
+
+nav { display: flex; gap: 18px; font-size: 13px; align-items: center; }
+nav a { color: #4a5568; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+nav a:hover { color: #0d5c46; }
+
+.header-left { display: flex; align-items: center; gap: 20px; font-size: 13px; color: #4a5568; }
+.header-left span { cursor: pointer; display: flex; align-items: center; gap: 5px; }
+
+/* عنوان الصفحة الأخضر */
+.page-title-bar { max-width: 1050px; margin: 25px auto 12px; padding: 0 20px; font-size: 14px; font-weight: 700; color: #0d5c46; text-align: right; }
+
+/* الحاوية البيضاء المتصلة بكل البيانات */
+.container { max-width: 1050px; margin: 0 auto 25px; padding: 0 20px; }
+.main-card { background: #ffffff; border: 1px solid #dcdcdc; border-radius: 8px; padding: 30px 40px; box-shadow: 0 1px 3px rgba(0,0,0,0.01); }
+
+.section-block { padding: 22px 0; border-bottom: 1px solid #e9ecef; }
+.section-block:first-child { padding-top: 0; }
+.section-block:last-child { border-bottom: none; padding-bottom: 0; }
+
+.section-title { font-size: 16px; font-weight: 700; color: #212529; margin-bottom: 20px; text-align: right; }
+
+.fields-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px 30px; direction: rtl; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+
+.field-group { display: flex; flex-direction: column; text-align: right; }
+.field-label { font-size: 12px; color: #6c757d; margin-bottom: 5px; font-weight: 400; }
+.field-val { font-size: 14px; font-weight: 600; color: #212529; }
+
+/* قسم التقييم مع النجوم الخضراء */
+.feedback-container { max-width: 1050px; margin: 0 auto 40px; padding: 0 20px; }
+.feedback-card { background: #ffffff; border: 1px solid #dcdcdc; border-radius: 8px; padding: 20px 30px; box-shadow: 0 1px 3px rgba(0,0,0,0.01); }
+.feedback-top-row { display: flex; justify-content: space-between; align-items: center; padding-bottom: 15px; border-bottom: 1px solid #e9ecef; }
+.rate-btn { background-color: #0d5c46; color: white; border: none; padding: 8px 22px; border-radius: 5px; font-weight: 700; font-size: 13px; cursor: pointer; }
+.rating-summary { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #212529; font-weight: 500; }
+.stars { color: #0d5c46; font-size: 16px; letter-spacing: 1px; }
+
+.feedback-bottom-row { display: flex; justify-content: space-between; align-items: center; padding-top: 15px; font-size: 13px; color: #495057; }
+.yn-group { display: flex; align-items: center; gap: 8px; }
+.yn-btn { background: #e9ecef; border: 1px solid #ced4da; padding: 4px 16px; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 12px; color: #212529; }
+.yn-btn.yes { background-color: #0d5c46; color: white; border-color: #0d5c46; }
+
+/* تذييل الصفحة */
+footer { background-color: #f8f9fa; border-top: 1px solid #dee2e6; color: #495057; padding: 40px 40px 20px; font-size: 12px; margin-top: 40px; }
+.footer-content { max-width: 1050px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: right; margin-bottom: 30px; }
+.footer-col h4 { font-size: 13px; font-weight: 700; color: #212529; margin-bottom: 12px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.footer-col ul li a { color: #6c757d; text-decoration: none; }
+.footer-col ul li a:hover { color: #0d5c46; }
+
+.social-icons { display: flex; gap: 8px; margin-top: 5px; }
+.social-icon { width: 26px; height: 26px; border: 1px solid #ced4da; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #495057; text-decoration: none; font-size: 11px; }
+
+.footer-bottom { border-top: 1px solid #dee2e6; padding-top: 20px; max-width: 1050px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; color: #6c757d; font-size: 11px; }
+.footer-bottom-links { display: flex; gap: 15px; }
+.footer-bottom-links a { color: #6c757d; text-decoration: none; }
+
+@media (max-width: 900px) {
+    .fields-grid, .footer-content { grid-template-columns: 1fr; }
+    .col-2, .col-3 { grid-column: span 1; }
+    header { flex-direction: column; gap: 15px; align-items: flex-start; padding: 15px; }
+    .feedback-top-row, .feedback-bottom-row { flex-direction: column; gap: 10px; align-items: flex-start; }
+}
