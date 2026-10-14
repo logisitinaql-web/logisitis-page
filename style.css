@@ -76,3 +76,5 @@ footer { background-color: #f8f9fa; border-top: 1px solid #dee2e6; color: #49505
     header { flex-direction: column; gap: 15px; align-items: flex-start; padding: 15px; }
     .feedback-top-row, .feedback-bottom-row { flex-direction: column; gap: 10px; align-items: flex-start; }
 }
+
+/* update */
