@@ -9,7 +9,11 @@ body { background-color: #f3f5f7; color: #212529; direction: rtl; text-align: ri
 header { background-color: #ffffff; border-bottom: 1px solid #dee2e6; padding: 12px 40px; display: flex; justify-content: space-between; align-items: center; }
 .header-right { display: flex; align-items: center; gap: 25px; }
 .logo-container { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.logo-svg { height: 35px; width: auto; }
+.logo-svg {
+    content: url('logo.png');
+    height: 42px;
+    width: auto;
+}
 .logo-texts { display: flex; flex-direction: column; text-align: right; }
 .logo-ar { font-size: 17px; font-weight: 700; color: #1a202c; line-height: 1; }
 .logo-en { font-size: 11px; font-weight: 700; color: #4a5568; letter-spacing: 0.5px; }
