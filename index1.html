@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بيانات السائق - منصة لوجستي</title>
+    <title>تفاصيل بطاقة التشغيل</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -17,192 +17,131 @@
             color: #333;
             direction: rtl;
         }
-        .gov-banner {
-            background-color: #f0f4f8;
-            padding: 8px 16px;
-            font-size: 13px;
-            color: #555;
-            border-bottom: 1px solid #e2e8f0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #ffffff;
+            border-radius: 6px;
+            padding: 30px 40px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
-        .gov-banner a {
-            color: #0066cc;
-            text-decoration: none;
+        .page-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 25px;
+            text-align: right;
         }
-        header {
-            background-color: #ffffff;
-            border-bottom: 1px solid #e2e8f0;
-            padding: 12px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .section-block {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #edf2f7;
+            padding-bottom: 20px;
         }
-        .header-right {
-            display: flex;
-            align-items: center;
+        .section-block:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
-        .logo-svg {
-            width: 38px;
-            height: 42px;
-        }
-        .logo-texts {
+        .info-item {
             display: flex;
             flex-direction: column;
         }
-        .logo-ar {
-            font-weight: 700;
-            font-size: 18px;
-            color: #0d5c46;
-            line-height: 1.1;
-        }
-        .logo-en {
-            font-size: 10px;
-            color: #666;
-            letter-spacing: 1px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #0d5c46;
-            font-size: 14px;
-            font-weight: 700;
-        }
-        .card-container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            padding: 30px;
-            border: 1px solid #e2e8f0;
-        }
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid #edf2f7;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
-        }
-        .card-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: #1a202c;
-        }
-        .status-badge {
-            background-color: #e6fffa;
-            color: #047857;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 13px;
-            border: 1px solid #a7f3d0;
-        }
-        .driver-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        @media (max-width: 600px) {
-            .driver-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        .info-group {
-            background-color: #f8fafc;
-            padding: 14px 18px;
-            border-radius: 6px;
-            border-right: 4px solid #0d5c46;
-        }
         .info-label {
             font-size: 13px;
-            color: #64748b;
+            color: #a0aec0;
             margin-bottom: 6px;
         }
         .info-value {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 700;
-            color: #1e293b;
+            color: #1a202c;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
 
-    <div class="gov-banner">
-        <span>موقع حكومي رسمي تابع لحكومة المملكة العربية السعودية</span> <a href="#">كيف تتحقق</a>
-    </div>
+    <div class="container">
+        <div class="page-title">تفاصيل بطاقة التشغيل</div>
 
-    <header>
-        <div class="header-right">
-            <a href="#" class="logo-container">
-                <svg class="logo-svg" viewBox="0 0 50 55" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M25 0 C38 3 47 8 47 8 C47 25 41 42 25 50 C9 42 3 25 3 8 C3 8 12 3 25 0 Z" fill="url(#shieldGrad)" />
-                    <path d="M25 12 L15 36 L22 32 L25 25 L28 32 L35 36 Z" fill="#ffffff" />
-                    <line x1="25" y1="6" x2="25" y2="14" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
-                    <defs>
-                        <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#1b4f72" />
-                            <stop offset="100%" stop-color="#117a65" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-                <div class="logo-texts">
-                    <span class="logo-ar">لوجستي</span>
-                    <span class="logo-en">LOGISTI</span>
+        <!-- بيانات المنشأة/الفرد -->
+        <div class="section-block">
+            <div class="section-title">بيانات المنشأة/الفرد</div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">الاسم</div>
+                    <div class="info-value">شركة ركاب السرعه للخدمات اللوجستية</div>
                 </div>
-            </a>
-            <nav>
-                <a href="#">بيانات السائق</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="card-container">
-        <div class="card-header">
-            <div class="card-title">تفاصيل بطاقة السائق</div>
-            <div class="status-badge">سارية المفعول</div>
-        </div>
-
-        <div class="driver-grid">
-            <div class="info-group">
-                <div class="info-label">رقم بطاقة السائق</div>
-                <div class="info-value">00000000</div>
-            </div>
-
-            <div class="info-group">
-                <div class="info-label">اسم السائق</div>
-                <div class="info-value">اسم السائق هنا</div>
-            </div>
-
-            <div class="info-group">
-                <div class="info-label">هوية السائق</div>
-                <div class="info-value">0000000000</div>
-            </div>
-
-            <div class="info-group">
-                <div class="info-label">تاريخ الاصدار</div>
-                <div class="info-value">2026/01/01</div>
-            </div>
-
-            <div class="info-group">
-                <div class="info-label">تاريخ الانتهاء</div>
-                <div class="info-value">2027/01/01</div>
-            </div>
-
-            <div class="info-group">
-                <div class="info-label">تصنيف البطاقة</div>
-                <div class="info-value">سائق نقل بضائع</div>
             </div>
         </div>
-    </main>
+
+        <!-- معلومات الترخيص الرئيسي -->
+        <div class="section-block">
+            <div class="section-title">معلومات الترخيص الرئيسي</div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">رقم الترخيص</div>
+                    <div class="info-value">38/00026896</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">نوع الترخيص/النشاط</div>
+                    <div class="info-value">نشاط النقل الخفيف للبضائع لأغراض تجارية (للغير - منشآت)</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">المدينة</div>
+                    <div class="info-value">محافظة الرس</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- بيانات السائق (بدلاً من بطاقة التشغيل والمعلومات المركبة) -->
+        <div class="section-block">
+            <div class="section-title">بيانات السائق</div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">رقم بطاقة السائق</div>
+                    <div class="info-value">38-00090078</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">اسم السائق</div>
+                    <div class="info-value">اسم السائق هنا</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">هوية السائق</div>
+                    <div class="info-value">1000000000</div>
+                </div>
+                <div class="info-item" style="margin-top: 15px;">
+                    <div class="info-label">تاريخ الاصدار</div>
+                    <div class="info-value">1448/01/29</div>
+                </div>
+                <div class="info-item" style="margin-top: 15px;">
+                    <div class="info-label">تاريخ الانتهاء</div>
+                    <div class="info-value">1449/01/29</div>
+                </div>
+                <div class="info-item" style="margin-top: 15px;">
+                    <div class="info-label">تصنيف البطاقة</div>
+                    <div class="info-value">نشاط النقل الخفيف للبضائع لأغراض تجارية (للغير - منشآت)</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 </body>
 </html>
