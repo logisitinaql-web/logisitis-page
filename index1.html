@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل بطاقة السائق - منصة لوجستي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .card-container {
+            max-width: 850px;
+            margin: 30px auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 25px;
+            border: 1px solid #e2e8f0;
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .card-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a202c;
+        }
+        .status-badge {
+            background-color: #e6fffa;
+            color: #047857;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 13px;
+            border: 1px solid #a7f3d0;
+        }
+        .driver-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        .info-group {
+            background-color: #f8fafc;
+            padding: 12px 16px;
+            border-radius: 6px;
+            border-right: 4px solid #117a65;
+        }
+        .info-label {
+            font-size: 12px;
+            color: #64748b;
+            margin-bottom: 4px;
+        }
+        .info-value {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1e293b;
+        }
+        .qr-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: #f1f5f9;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .qr-section img {
+            width: 140px;
+            height: 140px;
+            background: #fff;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+        }
+        .qr-text {
+            font-size: 12px;
+            color: #475569;
+            margin-top: 8px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="gov-banner">
+        <span>موقع حكومي رسمي تابع لحكومة المملكة العربية السعودية</span> <a href="#">كيف تتحقق</a>
+    </div>
+
+    <header>
+        <div class="header-right">
+            <a href="index.html" class="logo-container">
+                <svg class="logo-svg" viewBox="0 0 50 55" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25 0 C38 3 47 8 47 8 C47 25 41 42 25 50 C9 42 3 25 3 8 C3 8 12 3 25 0 Z" fill="url(#shieldGrad)" />
+                    <path d="M25 12 L15 36 L22 32 L25 25 L28 32 L35 36 Z" fill="#ffffff" />
+                    <line x1="25" y1="6" x2="25" y2="14" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#1b4f72" />
+                            <stop offset="100%" stop-color="#117a65" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="logo-texts">
+                    <span class="logo-ar">لوجستي</span>
+                    <span class="logo-en">LOGISTI</span>
+                </div>
+            </a>
+            <nav>
+                <a href="index.html">بطاقات المركبات</a>
+                <a href="index1.html" style="color: #0d5c46; font-weight:700;">بطاقة السائق</a>
+                <a href="#">استعلام</a>
+            </nav>
+        </div>
+        <div class="header-left">
+            <span>الملف الشخصي</span>
+        </div>
+    </header>
+
+    <main class="card-container">
+        <div class="card-header">
+            <div class="card-title">تفاصيل بطاقة السائق</div>
+            <div class="status-badge">سارية المفعول</div>
+        </div>
+
+        <div class="driver-grid">
+            <div class="info-group">
+                <div class="info-label">رقم بطاقة السائق</div>
+                <div class="info-value">DRV-2026-0001</div>
+            </div>
+            <div class="info-group">
+                <div class="info-label">اسم السائق</div>
+                <div class="info-value">اسم السائق هنا</div>
+            </div>
+            <div class="info-group">
+                <div class="info-label">هوية السائق</div>
+                <div class="info-value">1000000000</div>
+            </div>
+            <div class="info-group">
+                <div class="info-label">تاريخ الاصدار</div>
+                <div class="info-value">2026/01/01</div>
+            </div>
+            <div class="info-group">
+                <div class="info-label">تاريخ الانتهاء</div>
+                <div class="info-value">2027/01/01</div>
+            </div>
+            <div class="info-group">
+                <div class="info-label">تصنيف البطاقة</div>
+                <div class="info-value">سنوية</div>
+            </div>
+        </div>
+
+        <div class="qr-section">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://logisitinaql-web.github.io/logisitis-page/index1.html" alt="رمز QR السائق">
+            <div class="qr-text">امسح الرمز للتحقق من صحة وصلاحية بطاقة السائق</div>
+        </div>
+    </main>
+
+</body>
+</html>
