@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بيانات السائق - منصة لوجستي</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <style>
         * {
             box-sizing: border-box;
@@ -24,11 +23,13 @@
             font-size: 13px;
             color: #555;
             border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         .gov-banner a {
             color: #0066cc;
             text-decoration: none;
-            margin-right: 5px;
         }
         header {
             background-color: #ffffff;
@@ -68,15 +69,11 @@
             color: #666;
             letter-spacing: 1px;
         }
-        nav {
-            display: flex;
-            gap: 15px;
-        }
         nav a {
             text-decoration: none;
-            color: #4a5568;
+            color: #0d5c46;
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 700;
         }
         .card-container {
             max-width: 800px;
@@ -147,4 +144,65 @@
         <div class="header-right">
             <a href="#" class="logo-container">
                 <svg class="logo-svg" viewBox="0 0 50 55" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M25 0 C38 3 47 8 47 8 C47 25 41 42 25 50 C9 42 3 25 3 8 C3 8 12 3
+                    <path d="M25 0 C38 3 47 8 47 8 C47 25 41 42 25 50 C9 42 3 25 3 8 C3 8 12 3 25 0 Z" fill="url(#shieldGrad)" />
+                    <path d="M25 12 L15 36 L22 32 L25 25 L28 32 L35 36 Z" fill="#ffffff" />
+                    <line x1="25" y1="6" x2="25" y2="14" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#1b4f72" />
+                            <stop offset="100%" stop-color="#117a65" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <div class="logo-texts">
+                    <span class="logo-ar">لوجستي</span>
+                    <span class="logo-en">LOGISTI</span>
+                </div>
+            </a>
+            <nav>
+                <a href="#">بيانات السائق</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="card-container">
+        <div class="card-header">
+            <div class="card-title">تفاصيل بطاقة السائق</div>
+            <div class="status-badge">سارية المفعول</div>
+        </div>
+
+        <div class="driver-grid">
+            <div class="info-group">
+                <div class="info-label">رقم بطاقة السائق</div>
+                <div class="info-value">00000000</div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-label">اسم السائق</div>
+                <div class="info-value">اسم السائق هنا</div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-label">هوية السائق</div>
+                <div class="info-value">0000000000</div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-label">تاريخ الاصدار</div>
+                <div class="info-value">2026/01/01</div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-label">تاريخ الانتهاء</div>
+                <div class="info-value">2027/01/01</div>
+            </div>
+
+            <div class="info-group">
+                <div class="info-label">تصنيف البطاقة</div>
+                <div class="info-value">سائق نقل بضائع</div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
